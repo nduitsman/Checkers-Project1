@@ -7,5 +7,8 @@ In order to assist users, for those whom are unfamiliar with the rules, tiles wi
 
 ## Ingame Images
 
-[Screen Shot 2022-08-11 at 10 15 07 AM](https://user-images.githubusercontent.com/109879521/184163229-8cc84c60-2bcd-454c-8918-b942622188dc.png)
+<img width="1400" alt="Screen Shot 2022-08-11 at 10 15 07 AM" src="https://user-images.githubusercontent.com/109879521/184163229-8cc84c60-2bcd-454c-8918-b942622188dc.png">
 
+<img width="1400" alt="Screen Shot 2022-08-11 at 10 17 15 AM" src="https://user-images.githubusercontent.com/109879521/184163773-156be19c-fcf4-4237-a207-910042891f2f.png">
+
+<img width="1400" alt="Screen Shot 2022-08-11 at 10 18 54 AM" src="https://user-images.githubusercontent.com/109879521/184163803-985ba939-673a-4892-acaa-0f0168729b16.png">
