@@ -1,3 +1,4 @@
+
 // Global elements that are called upon various functions, most functions reset global if required. 
 let endPos = '';
 let startPos = '';
@@ -114,6 +115,8 @@ function drop(event) {
         event.target.appendChild(document.getElementById(data));
         if(jumpCheck(startPos, endPos)){
             findAndRemove(startPos, endPos);
+            turnToggle();
+            setTimeout(turnToggle,2000);
         };
 
     const brightnessClear = document.querySelectorAll('.black');
@@ -372,7 +375,3 @@ function turnToggle() {
         document.querySelector('.blackTurn').style.visibility = 'visible';
     }
 }
-
-
-// ******** STRETCH GOALS *********************//
-// double/triple jumping

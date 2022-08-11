@@ -1,7 +1,6 @@
 body {
     background-image: url("https://www.myfreetextures.com/wp-content/uploads/2015/01/grass-texture-number-1.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
     display: grid;
     grid-template-rows: 200px 1fr 200px;
@@ -182,4 +181,12 @@ h1 {
 .king {
     border: 7px solid rgb(209, 184, 45);
     border-radius: 50%;
+}
+
+.testClass {
+    grid-row: 2;
+    grid-column: 3;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
 }
