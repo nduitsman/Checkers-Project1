@@ -141,7 +141,7 @@ function findAndRemove(startPos, endPos) {
     let startCharIndex = strArr.indexOf(startPos[0]);
     let endCharIndex = strArr.indexOf(endPos[0]);
     let whichPlayerToReduce = '';
-// up-right WORKING!
+// up-right 
     if (endCharIndex > startCharIndex && endPos[1] > startPos[1]) {
         jumpedPos += strArr[endCharIndex - 1];
         jumpedPos += (endPos[1]-1);
@@ -157,7 +157,7 @@ function findAndRemove(startPos, endPos) {
         if(unknownpiece.lastElementChild !== null) {
             unknownpiece.removeChild(unknownpiece.lastElementChild);
         }
-// down-right WORKING!
+// down-right 
     } else if (endCharIndex > startCharIndex && endPos[1] < startPos[1]) {
         jumpedPos += strArr[endCharIndex - 1];
         jumpedPos += (parseInt(endPos[1],10) + 1);
@@ -170,7 +170,7 @@ function findAndRemove(startPos, endPos) {
         if (unknownpiece.lastElementChild !== null) {
             unknownpiece.removeChild(unknownpiece.lastElementChild);
         }
-// up-left WORKING!
+// up-left 
     } else if (endCharIndex < startCharIndex && endPos[1] > startPos[1]) {
         jumpedPos += strArr[endCharIndex + 1];
         jumpedPos += (endPos[1] - 1);
@@ -183,7 +183,7 @@ function findAndRemove(startPos, endPos) {
         if(unknownpiece.lastElementChild !== null) {
             unknownpiece.removeChild(unknownpiece.lastElementChild);
         }
-// down-left WORKING!
+// down-left 
     } else if (endCharIndex < startCharIndex && endPos[1] < startPos[1]) {
         jumpedPos += strArr[endCharIndex + 1];
         jumpedPos += (parseInt(endPos[1],10) + 1);
@@ -250,7 +250,6 @@ function availableMove(startPos, kingStr) {
 
     if(currentPlayer === 'player1Pieces' || kingStr === 'king'){
         moveOption2 = prevLetter + nextNum;
-        console.log(moveOption2);
         if(strArr.includes(moveOption2[0]) && numArr.includes(moveOption2[1])){
             if(obstructionCheck(moveOption2)){
                 if(document.getElementById(moveOption2).lastChild.className === currentPlayer){
@@ -273,14 +272,10 @@ function availableMove(startPos, kingStr) {
 
     if(currentPlayer === 'player2Pieces' || kingStr === 'king'){
         moveOption3 = nextLetter + prevNum;
-        console.log('move3: '+moveOption3+'initial');
         if(strArr.includes(moveOption3[0]) && numArr.includes(moveOption3[1])){
             if(obstructionCheck(moveOption3)){
-                console.log('move3 obst occured');
                 if(document.getElementById(moveOption3).lastChild.className === currentPlayer){
-                    console.log('im in move3 post player check')
                     moveOption3 = '';
-                    console.log('MO3 after player check '+moveOption3);
                 } else {
                     let nextLetter = String.fromCharCode(moveOption3.charCodeAt(0)+1);
                     let prevNum = parseInt(moveOption3[1],10)-1;
@@ -318,7 +313,7 @@ function availableMove(startPos, kingStr) {
             moveOption4 = '';
         }
     }
-    console.log(`MO1: ${moveOption1} MO2: ${moveOption2} MO3: ${moveOption3} MO4: ${moveOption4}`);
+
     if(strArr.includes(moveOption1[0])){
         document.getElementById(moveOption1).style.filter = "brightness(400%)";
     }
@@ -378,9 +373,6 @@ function turnToggle() {
     }
 }
 
-// function kingCondition() {
 
-// }
 // ******** STRETCH GOALS *********************//
-// King condition
 // double/triple jumping
