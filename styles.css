@@ -183,10 +183,3 @@ h1 {
     border-radius: 50%;
 }
 
-.testClass {
-    grid-row: 2;
-    grid-column: 3;
-    color: red;
-    font-size: 35px;
-    font-weight: bold;
-}
