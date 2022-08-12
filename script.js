@@ -13,6 +13,7 @@ let currentPlayer = 'player1Pieces';
 let p1count = 12;
 let p2count = 12;
 
+
 // Creates game pieces for each player with unique IDs and classes, adding dragging attributes.
 // Player 1 pieces placed in squares with the 'starter1' class, and player 2 on 'starter2' class.
 
@@ -22,6 +23,7 @@ function startGame() {
     let starter2 = document.querySelectorAll('.starter2');
     document.querySelector('.whiteTurn').style.visibility = 'hidden';
     document.querySelector('.blackTurn').style.visibility = 'visible';
+    
 
 
     starter1.forEach((tile) => {
@@ -110,22 +112,19 @@ function drop(event) {
         }
     }
 
-
     if (endPos === moveOption1 || endPos === moveOption2 || endPos === moveOption3 || endPos === moveOption4){
         event.target.appendChild(document.getElementById(data));
         if(jumpCheck(startPos, endPos)){
             findAndRemove(startPos, endPos);
-            turnToggle();
-            setTimeout(turnToggle,2000);
+
+            
         };
 
     const brightnessClear = document.querySelectorAll('.black');
     brightnessClear.forEach(tile => {
         tile.style.filter = "brightness(100%)";
-    });
-        
-    turnToggle();
-
+    });           
+        turnToggle();
     }
 }
 
